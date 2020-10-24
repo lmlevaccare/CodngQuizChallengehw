@@ -1,0 +1,78 @@
+
+  
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+
+ 
+}
+
+
+body {
+
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(189, 156, 216);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: magenta;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 0 10px 5px;
+  box-shadow: purple;
+  color: white;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0px;
+}
+
+.btn {
+
+  border: 5px solid magenta;
+  background-color:white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  color:magenta;
+  outline: none;
+
+}
+
+ #question{
+color:white;
+}
+
+
+.btn:hover {
+  border-color: yellow;
+}
+
+.start-btn, .next-btn {
+  font-size: 45px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
