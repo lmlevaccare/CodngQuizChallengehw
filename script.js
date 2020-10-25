@@ -15,11 +15,14 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
+
+
 window.onload = function () {
     var fiveMinutes = 60 * 5,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
-};
+ };
+
 
 
 const startButton = document.getElementById('start-btn')
@@ -27,11 +30,18 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-const timeClock =document.getElementById('#timer')
+const timerStart=document.getElementById('time')
+// const timeClock = document.getElementById('#timer')
+// const tChoice = document.getElementById("btn1 btn2")
+// const minusClock = -10
 
 let shuffledQuestions, currentQuestionIndex
 
-startButton.addEventListener('click', startGame )
+
+
+
+startButton.addEventListener('click', startGame)
+timerStart.addEventListener ('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
@@ -210,26 +220,5 @@ decrementEl.addEventListener("click", function() {
     setCounterText();
   }
 }); 
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
-
-window.onload = function () {
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-};
 
