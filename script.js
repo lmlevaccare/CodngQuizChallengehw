@@ -124,12 +124,12 @@ const questions = [
     ]
   },
   {
-    question: 'What does "DOM" stand for?',
+  question: 'How can you remove an item by index position?',
     answers: [
-      { text: 'Document Object Model', correct: true},
+      { text: 'Splice', correct: true},
       { text: 'IDK', correct: false },
-      { text: 'Document Objuect Machine', correct: false },
-      { text: 'Dont Own Machine', correct: false }
+      { text: 'for loop', correct: false },
+      { text: 'hop', correct: false }
     ]
   },
   {
