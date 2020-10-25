@@ -8,6 +8,14 @@
  
 }
 
+.time-clock {  border: 5px solid magenta;
+  background-color:white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  color:magenta;
+  outline: none;
+
+}
 
 body {
 

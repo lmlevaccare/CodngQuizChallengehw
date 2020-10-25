@@ -30,18 +30,10 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-const timerStart=document.getElementById('time')
-// const timeClock = document.getElementById('#timer')
-// const tChoice = document.getElementById("btn1 btn2")
-// const minusClock = -10
 
 let shuffledQuestions, currentQuestionIndex
 
-
-
-
 startButton.addEventListener('click', startGame)
-timerStart.addEventListener ('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
@@ -196,8 +188,6 @@ const questions = [
   }
 ]
 
-
-
 var count = 0;
 var incrementEl = document.querySelector("#answer-buttons");
 var decrementEl = document.querySelector("#decrement");
@@ -220,5 +210,3 @@ decrementEl.addEventListener("click", function() {
     setCounterText();
   }
 }); 
-
-
