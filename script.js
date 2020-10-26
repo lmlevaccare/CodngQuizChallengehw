@@ -1,27 +1,45 @@
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+var timeEl = document.querySelector(".time");
+var mainEl = document.getElementById("main");
+var imgEl = document.createElement("img");
 
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
+var secondsLeft = 60*3;
+
+function setTime() {
+  var timerInterval = setInterval(function() {
+           secondsLeft--;
+    timeEl.textContent =  secondsLeft + " Seconds Left";
+ 
+
+
+    if(secondsLeft === 0) {
+      clearInterval(timerInterval)
+
+    
+      sendMessage();
+    }
+
+  }, 1000);
 }
 
 
 
-window.onload = function () {
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
- };
+function sendMessage() {
+  timeEl.textContent = " GAME-OVER";
+  // var imgEl = document.createElement("img");
+
+  // imgEl.setAttribute("src", "images/image_1.jpg");
+  // mainEl.appendChild(imgEl);
+
+}
+
+
+
+
+
+
+setTime();
 
 
 
@@ -58,13 +76,15 @@ function showQuestion(question) {
     const button = document.createElement('button')
     button.innerText = answer.text
     button.classList.add('btn')
-    if (answer.correct) {
-      button.dataset.correct = answer.correct
+    if (answer.correct ) {
+      button.dataset.correct = answer.correct 
     }
+
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
   })
 }
+
 
 function resetState() {
   clearStatusClass(document.body)
@@ -124,12 +144,12 @@ const questions = [
     ]
   },
   {
-    question: 'What does "DOM" stand for?',
+  question: 'How can you remove an item by index position?',
     answers: [
-      { text: 'Document Object Model', correct: true},
+      { text: 'Splice', correct: true},
       { text: 'IDK', correct: false },
-      { text: 'Document Objuect Machine', correct: false },
-      { text: 'Dont Own Machine', correct: false }
+      { text: 'for loop', correct: false },
+      { text: 'hop', correct: false }
     ]
   },
   {
@@ -185,12 +205,15 @@ const questions = [
       { text: '1', correct: false },
       { text: '10', correct: false }
     ]
+ 
+
   }
 ]
 
+
 var count = 0;
 var incrementEl = document.querySelector("#answer-buttons");
-var decrementEl = document.querySelector("#decrement");
+var decrementEl = document.querySelector(".btn");
 var countEl = document.querySelector("#count");
 
 function setCounterText() {
@@ -210,3 +233,5 @@ decrementEl.addEventListener("click", function() {
     setCounterText();
   }
 }); 
+
+  

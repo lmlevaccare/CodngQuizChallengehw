@@ -5,6 +5,7 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 30px;
 
+
  
 }
 
@@ -40,6 +41,7 @@ body {
   box-shadow: 0 0 10px 5px;
   box-shadow: purple;
   color: white;
+ 
 }
 
 .btn-grid {
@@ -57,7 +59,16 @@ body {
   padding: 5px 10px;
   color:magenta;
   outline: none;
+ 
 
+}
+
+.time {
+
+  background-color:white;
+  border: solid magenta;
+  color: magenta; 
+  outline: none;
 }
 
  #question{
