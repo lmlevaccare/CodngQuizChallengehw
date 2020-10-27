@@ -66,7 +66,7 @@ body {
 .time {
 
   background-color:white;
-  border: solid magenta;
+  border: magenta;
   color: magenta; 
   outline: none;
 }
