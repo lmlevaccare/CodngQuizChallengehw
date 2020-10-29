@@ -1,10 +1,8 @@
-
-
 var timeEl = document.querySelector(".time");
 var mainEl = document.getElementById("main");
 var imgEl = document.createElement("img");
 
-var secondsLeft = 60*3;
+var secondsLeft = 60;
 
 function setTime() {
   var timerInterval = setInterval(function() {
@@ -45,6 +43,7 @@ setTime();
 
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+const gameOver = document.getElementById('game-over')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -106,8 +105,14 @@ function selectAnswer(e) {
   } else {
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
+  
   }
+ 
+ 
+  
 }
+
+  
 
 function setStatusClass(element, correct) {
   clearStatusClass(element)

@@ -9,9 +9,10 @@
  
 }
 
-.time-clock {  border: 5px solid magenta;
+.time-clock { 
+  border: 5px solid magenta;
   background-color:white;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 5px 10px;
   color:magenta;
   outline: none;
@@ -33,12 +34,12 @@ body {
 
 
 .container {
-  width: 800px;
+  width: 820px;
   max-width: 80%;
   background-color: magenta;
   border-radius: 20px;
   padding: 10px;
-  box-shadow: 0 0 10px 5px;
+  box-shadow: 0 0 10px 15px;
   box-shadow: purple;
   color: white;
  
@@ -66,7 +67,7 @@ body {
 .time {
 
   background-color:white;
-  border: solid magenta;
+  border: magenta;
   color: magenta; 
   outline: none;
 }

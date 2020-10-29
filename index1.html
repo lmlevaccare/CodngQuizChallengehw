@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style1.css" />
+    <title>Quiz Form</title>
+  </head>
+  <body>
+    <div class="clearfix">
+      <div class="card">
+        <h2>Register</h2>
+        <form method="POST">
+          <div class="input-group">
+            <label for="email">Name</label>
+            <input type="text" name="email" id="email" placeholder="Lauren"/>
+          </div>
+          <div class="input-group">
+            <label for="password">Quiz Score</label>
+            <input type="password" name="password" id="password" placeholder="..." />
+          </div>
+          <div id="msg"></div>
+          <button id="sign-up">Sign Up</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Last Registered User:</h2>
+        <p><strong>Name:</strong> <span id="user-email"></span></p>
+        <p><strong>Quiz Score:</strong> <span id="user-password"></span></p>
+      </div>
+    </div>
+    <script src="./script1.js"></script>
+  </body>
+</html>
